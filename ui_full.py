@@ -1,4 +1,4 @@
-# ui_full.py
+
 import streamlit as st
 import json
 import pandas as pd
@@ -12,9 +12,6 @@ from main_agent import MainAgent
 
 st.set_page_config(page_title="RFP AI System", layout="wide")
 
-# -------------------
-# Global CSS (tabs fix + basic styling)
-# -------------------
 st.markdown("""
 <style>
 /* Title */
@@ -194,7 +191,7 @@ if "final_output" in st.session_state and st.session_state["final_output"]:
             st.info("No pricing entries found.")
 
     # -------------------
-    # Logs tab (NEW)
+    # Logs tab 
     # -------------------
     with tab3:
         st.subheader("Pipeline Execution Logs")
