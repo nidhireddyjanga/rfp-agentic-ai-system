@@ -1,153 +1,153 @@
-RFP AI System – Multi-Agent Workflow for B2B Tender Automation
+# Agentic AI System for B2B RFP Processing
+
+## Overview
+This project demonstrates an end-to-end Agentic AI system designed to automate and accelerate the B2B RFP response process for an industrial wires and cables manufacturer.
+
+The solution simulates how Sales, Technical, and Pricing teams collaborate using AI agents to identify RFPs, match product specifications, estimate pricing, and generate a consolidated response.
+
+---
+
+## Problem Statement
+Manual RFP processing causes delays in identification, technical evaluation, and pricing, reducing the chances of winning large B2B tenders.
+
+---
+
+## Solution Approach
+We implemented a multi-agent architecture where each agent performs a specialized role, coordinated by a Main Orchestrator.
 
-This project is our group attempt at simplifying the slow, manual RFP response process used in many industrial companies (like cable manufacturers, FMEG, and wiring OEMs).
-Instead of humans passing spreadsheets and PDFs around, we built a small multi-agent system that reads RFPs, matches products, estimates pricing, and prepares structured outputs.
+### Agents Involved
+
+Sales Agent
+- Identifies RFPs and extracts scope, due dates, quantities, and test requirements
+- Prepares role-specific summaries for downstream agents
+
+Technical Agent
+- Matches RFP product specifications with OEM product SKUs
+- Recommends Top-3 SKUs per item
+- Calculates a Spec Match percentage
+- Generates a comparison table for each RFP item
+
+Pricing Agent
+- Assigns unit prices using synthetic pricing data
+- Adds testing and acceptance test costs
+- Produces a consolidated pricing table
+
+Main Agent (Orchestrator)
+- Coordinates all agents
+- Consolidates technical, pricing, and summary outputs
+- Generates the final structured RFP response
+
+---
+
+## Key Features
+- Multi-agent orchestration using Agentic AI principles
+- Context-aware summaries for Technical and Pricing agents
+- Top-3 product recommendation with spec match scoring
+- Automated pricing estimation (products and tests)
+- End-to-end pipeline execution
+- Interactive Streamlit-based UI
+- Agent execution logs for traceability
 
-It’s not meant to be perfect or “fully production-level,” but it covers most of the bottlenecks we found during research and was a fun challenge to work on.
+---
 
+## Tech Stack
+- Python
+- Streamlit
+- Pandas
+- CSV-based synthetic datasets
+- GitHub
 
-🧠 Agent Overview
+---
 
-We built four simple agents, each doing one specific step in the RFP chain.
+## Project Structure
 
-1. Sales Agent (RFP Discovery & Shortlisting)
+```text
+rfp-ai-system-main/
+├── agents/
+│   ├── sales_agent.py
+│   ├── technical_agent.py
+│   └── pricing_agent.py
+├── data/
+│   ├── rfps/
+│   ├── products.csv
+│   ├── product_pricing.csv
+│   └── test_pricing.csv
+├── main_agent.py
+├── orchestrator.py
+├── ui_full.py
+├── README.md
+└── .gitignore
+```
 
-What it does:
+---
 
-Pretends to “scan” URLs (we simulated this with sample files)
+## How to Run the Project
 
-Picks RFPs due within the next 3 months
+Activate virtual environment  
+.venv\Scripts\activate
 
-Summarizes the RFP for downstream agents
+Launch Streamlit UI  
+streamlit run ui_full.py
 
-Hands off the selected RFP to the Main Orchestrator
+---
 
-This agent acts like a basic filter so the team isn’t drowning in low-priority RFPs.
+## Demo Flow
+1. Upload or select an RFP (Scan URL or local repository)
+2. Run the pipeline
+3. View:
+   - Top-3 SKU recommendations
+   - Pricing breakdown
+   - Detailed item-level JSON
+   - Agent execution logs
+4. Download final response JSON
 
+---
 
-2. Technical Agent (Spec Matching & SKU Recommendation)
+## Output
+- Structured technical matching results
+- Spec comparison tables
+- Consolidated pricing estimates
+- Final RFP response JSON
+- Agent execution logs
 
-What it does:
+---
 
-Reads the RFP scope and specs
+## Team Contributions
 
-Compares them to our internal product database (CSV)
+- **Sales Agent Development**
+  - RFP discovery, URL scanning, and RFP summarization logic
 
-Scores products using a simple match metric:
+- **Technical Agent Development**
+  - SKU–RFP specification matching
+  - Spec match scoring logic
+  - Top-3 product recommendations and comparison tables
 
-Voltage (exact match)
+- **Pricing Agent Development**
+  - Product pricing estimation
+  - Test and acceptance cost calculation
+  - Consolidated pricing tables
 
-Conductor material
+- **Agent Orchestration & Integration**
+  - Main agent workflow coordination
+  - Inter-agent data flow and validation
+  - End-to-end pipeline execution
 
-Insulation thickness (±20% tolerance)
+- **Frontend & UX (Streamlit UI)**
+  - RFP upload/selection interface
+  - Pipeline execution controls
+  - Results visualization (tables, expanders, logs)
 
-Picks top 3 matching SKUs
+- **System Design & Architecture**
+  - Multi-agent architecture design
+  - Data schema definition and assumptions
 
-Selects the "Top SKU" per item for pricing
 
-Outputs a detailed technical_reco.json
+---
 
-This agent basically reduces the time engineers spend looking through product tables.
+## Demo Video
+Demo video attached separately as part of the submission.
 
+---
 
-
-3. Pricing Agent (Developed by: Ujjwal Moolchandani)
-
-This was the trickiest part because pricing usually depends on several moving parts.
-
-What the Pricing Agent actually computes:
-
-Material cost (SKU price × quantity)
-
-Test cost (per-test pricing, quantity defaults to 1 if not given)
-
-Margin (default 12%)
-
-GST (default 18%)
-
-Fixed overhead
-
-Final cost per item
-
-Grand total per RFP
-
-It also produces a bunch of helpful warnings — not to be annoying, but because missing SKUs or test prices can cause silent errors later.
-
-
-
-Outputs generated:
-
-pricing_output_RFP001.json
-pricing_output_RFP002.json
-pricing_output_RFP003.json
-pricing_output_combined.json
-
-
-The Pricing Agent expects technical_reco.json already generated by the Technical Agent.
-
-
-
-4. Main Orchestrator (Glue Logic)
-
-Depending on how the project is run, this file ties everything together:
-
-Sales → Technical → Pricing → Final Response
-
-
-This simulates how a real internal workflow might behave inside a company.
-
-📂 Data Files
-
-All input data lives in data/:
-
-products.csv → cable SKUs + specs
-
-product_pricing.csv → SKU → price
-
-test_pricing.csv → test → price
-
-rfps/*.json → sample RFPs
-
-validate_csv.py → small script to sanity-check CSV files
-
-We kept everything lightweight so anyone on the team could update/test it quickly.
-
-▶️ How to Run Everything (Simple Version)
-1. Run Technical Agent (creates technical_reco.json)
-python agents/technical_agent.py
-
-
-Make sure environment variables point to the right folders if needed.
-
-2. Run Pricing Agent (generates final pricing outputs)
-python agents/pricing_agent.py
-
-
-And that's basically it — outputs appear in the project root.
-
-⚠️ Notes & Gotchas (less formal but important)
-
-CSV formatting matters more than we expected — hence the validator.
-
-If an SKU/test isn't found, the Pricing Agent will warn you instead of silently failing.
-
-Technical Agent assumes that RFP specs use consistent naming (e.g., “1.1kV”, “Copper”).
-
-Quantity is not provided in our sample RFPs → Pricing Agent defaults it to 1.
-
-Margin/GST/overhead are adjustable inside the Pricing Agent file — we kept them simple.
-
-🙋‍♂️ Contributors
-
-Sales Agent – Nidhi Reddy Janga
-
-Technical Agent – Tanmay Rahul Kalanke
-
-Pricing Agent – Ujjwal Moolchandani
-
-Orchestrator & Integration – Shreya Rajeev
-
-
-💬 Final Thoughts
-
-This project helped us understand the flow of B2B RFP operations and also gave us a chance to simulate a real agent-based workflow. It’s far from a commercial-grade system, but it captures the essence of the problem and shows how AI agents can lighten repetitive tasks.
+## Disclaimer
+All pricing data, product data, and RFPs used in this project are synthetic and created solely for demonstration purposes.
