@@ -1,0 +1,435 @@
+{
+  "source_rfps_dir": "C:\\Users\\tanma\\Downloads\\RFPs",
+  "source_data_dir": "C:\\Users\\tanma\\Downloads\\AllData",
+  "rfps": [
+    {
+      "rfp_id": "RFP001",
+      "title": "Supply of LT Power Cables \u2013 Government Housing Project",
+      "due_date": "2025-03-20",
+      "tests": [
+        "Insulation Resistance Test",
+        "High Voltage Test"
+      ],
+      "items": [
+        {
+          "item_id": 1,
+          "description": "3.5 Core Aluminium Cable",
+          "top_sku": "SKU001",
+          "spec_match": 100,
+          "comparison": {
+            "rfp_specs": {
+              "voltage": "1.1kV",
+              "conductor": "Aluminium",
+              "insulation_thickness_mm": 1.2
+            },
+            "candidates": [
+              {
+                "sku": "SKU001",
+                "name": "Alu Cable 3.5C",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.1,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU002",
+                "name": "Alu Cable 3.5C Heavy",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.3,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU012",
+                "name": "Alu FR Cable",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.0,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              }
+            ]
+          }
+        },
+        {
+          "item_id": 2,
+          "description": "Single Core Copper Cable",
+          "top_sku": "SKU004",
+          "spec_match": 100,
+          "comparison": {
+            "rfp_specs": {
+              "voltage": "1.1kV",
+              "conductor": "Copper",
+              "insulation_thickness_mm": 0.8
+            },
+            "candidates": [
+              {
+                "sku": "SKU004",
+                "name": "Copper Cable 1C Heavy",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Copper",
+                  "insulation_thickness_mm": 0.9,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU003",
+                "name": "Copper Cable 1C",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Copper",
+                  "insulation_thickness_mm": 0.7,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU005",
+                "name": "Aluminium Cable 1C",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 0.9,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 0,
+                  "insulation_thickness_mm": 1,
+                  "total": 2
+                },
+                "spec_match": 67
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rfp_id": "RFP002",
+      "title": "Supply of HT & LT Cables for Metro Rail Extension",
+      "due_date": "2025-04-05",
+      "tests": [
+        "High Voltage Test",
+        "Conductor Resistance Test"
+      ],
+      "items": [
+        {
+          "item_id": 1,
+          "description": "Single Core Aluminium Cable",
+          "top_sku": "SKU005",
+          "spec_match": 100,
+          "comparison": {
+            "rfp_specs": {
+              "voltage": "1.1kV",
+              "conductor": "Aluminium",
+              "insulation_thickness_mm": 0.9
+            },
+            "candidates": [
+              {
+                "sku": "SKU005",
+                "name": "Aluminium Cable 1C",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 0.9,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU012",
+                "name": "Alu FR Cable",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.0,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU004",
+                "name": "Copper Cable 1C Heavy",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Copper",
+                  "insulation_thickness_mm": 0.9,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 0,
+                  "insulation_thickness_mm": 1,
+                  "total": 2
+                },
+                "spec_match": 67
+              }
+            ]
+          }
+        },
+        {
+          "item_id": 2,
+          "description": "3 Core Copper Armoured Cable",
+          "top_sku": "SKU010",
+          "spec_match": 100,
+          "comparison": {
+            "rfp_specs": {
+              "voltage": "3.3kV",
+              "conductor": "Copper",
+              "insulation_thickness_mm": 1.4
+            },
+            "candidates": [
+              {
+                "sku": "SKU010",
+                "name": "Copper Armoured Cable",
+                "product_specs": {
+                  "voltage": "3.3kV",
+                  "conductor": "Copper",
+                  "insulation_thickness_mm": 1.3,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU009",
+                "name": "Alu Armoured Cable",
+                "product_specs": {
+                  "voltage": "3.3kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.4,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 0,
+                  "insulation_thickness_mm": 1,
+                  "total": 2
+                },
+                "spec_match": 67
+              },
+              {
+                "sku": "SKU007",
+                "name": "Alu Cable HV",
+                "product_specs": {
+                  "voltage": "3.3kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.5,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 0,
+                  "insulation_thickness_mm": 1,
+                  "total": 2
+                },
+                "spec_match": 67
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rfp_id": "RFP003",
+      "title": "Procurement of Power Cables \u2013 Smart City Deployment",
+      "due_date": "2025-03-10",
+      "tests": [
+        "Flame Retardant Test",
+        "Insulation Resistance Test"
+      ],
+      "items": [
+        {
+          "item_id": 1,
+          "description": "Flexible Copper Cable",
+          "top_sku": "SKU008",
+          "spec_match": 100,
+          "comparison": {
+            "rfp_specs": {
+              "voltage": "1.1kV",
+              "conductor": "Copper",
+              "insulation_thickness_mm": 0.5
+            },
+            "candidates": [
+              {
+                "sku": "SKU008",
+                "name": "Copper Flexible",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Copper",
+                  "insulation_thickness_mm": 0.5,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU011",
+                "name": "Copper FR Cable",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Copper",
+                  "insulation_thickness_mm": 0.6,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU003",
+                "name": "Copper Cable 1C",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Copper",
+                  "insulation_thickness_mm": 0.7,
+                  "std": "IS-694"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 0,
+                  "total": 2
+                },
+                "spec_match": 67
+              }
+            ]
+          }
+        },
+        {
+          "item_id": 2,
+          "description": "Heavy Duty Aluminium Cable",
+          "top_sku": "SKU002",
+          "spec_match": 100,
+          "comparison": {
+            "rfp_specs": {
+              "voltage": "1.1kV",
+              "conductor": "Aluminium",
+              "insulation_thickness_mm": 1.4
+            },
+            "candidates": [
+              {
+                "sku": "SKU002",
+                "name": "Alu Cable 3.5C Heavy",
+                "product_specs": {
+                  "voltage": "1.1kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.3,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 1,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 3
+                },
+                "spec_match": 100
+              },
+              {
+                "sku": "SKU009",
+                "name": "Alu Armoured Cable",
+                "product_specs": {
+                  "voltage": "3.3kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.4,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 0,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 2
+                },
+                "spec_match": 67
+              },
+              {
+                "sku": "SKU007",
+                "name": "Alu Cable HV",
+                "product_specs": {
+                  "voltage": "3.3kV",
+                  "conductor": "Aluminium",
+                  "insulation_thickness_mm": 1.5,
+                  "std": "IS-7098"
+                },
+                "scores": {
+                  "voltage": 0,
+                  "conductor": 1,
+                  "insulation_thickness_mm": 1,
+                  "total": 2
+                },
+                "spec_match": 67
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

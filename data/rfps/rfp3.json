@@ -1,0 +1,28 @@
+{
+  "id": "RFP003",
+  "title": "Procurement of Power Cables – Smart City Deployment",
+  "due_date": "2025-03-10",
+  "scope": [
+    {
+      "item_id": 1,
+      "description": "Flexible Copper Cable",
+      "quantity_km": 20,
+      "specs": {
+        "voltage": "1.1kV",
+        "conductor": "Copper",
+        "insulation_thickness_mm": 0.5
+      }
+    },
+    {
+      "item_id": 2,
+      "description": "Heavy Duty Aluminium Cable",
+      "quantity_km": 12,
+      "specs": {
+        "voltage": "1.1kV",
+        "conductor": "Aluminium",
+        "insulation_thickness_mm": 1.4
+      }
+    }
+  ],
+  "tests": ["Flame Retardant Test", "Insulation Resistance Test"]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "RFP001",
+  "title": "Supply of LT Power Cables – Government Housing Project",
+  "due_date": "2025-03-20",
+  "scope": [
+    {
+      "item_id": 1,
+      "description": "3.5 Core Aluminium Cable",
+      "quantity_km": 10,
+      "specs": {
+        "voltage": "1.1kV",
+        "conductor": "Aluminium",
+        "insulation_thickness_mm": 1.2
+      }
+    },
+    {
+      "item_id": 2,
+      "description": "Single Core Copper Cable",
+      "quantity_km": 5,
+      "specs": {
+        "voltage": "1.1kV",
+        "conductor": "Copper",
+        "insulation_thickness_mm": 0.8
+      }
+    }
+  ],
+  "tests": ["Insulation Resistance Test", "High Voltage Test"]
+}
