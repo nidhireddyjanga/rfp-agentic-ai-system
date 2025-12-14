@@ -4,8 +4,6 @@ import re
 import tempfile
 from typing import List, Dict, Any
 
-# Optional imports for URL/PDF fetching. If not available in your environment,
-# code falls back to local-file matching only.
 try:
     import requests
     from io import BytesIO
